@@ -19,15 +19,11 @@
    Hey there, I'm <b>Zihao Wang</b>
 </h3>
 
-<table align="center"><tr><td>
-
-```yaml
-🎓 Education  │ 东北大学 (985·211·双一流) 硕士
-🎯 Focus      │ 计算机视觉 / 机器人感知·决策·执行 / 大模型
-📍 Location   │ 中国·深圳
-```
-
-</td></tr></table>
+<p align="center">
+  🎓 <b>东北大学</b> (985·211·双一流) 硕士<br>
+  🎯 计算机视觉 / 机器人感知·决策·执行 / 大模型<br>
+  📍 中国·深圳
+</p>
 
 ---
 
