@@ -182,17 +182,6 @@
 
 ---
 
-## 📜 Publications & Patents
-
-> 📄 **Unlocking the Head** — *Unleashing Deep Learning & Depth Camera for Free Head Movement Gaze Estimation*
-
-| 专利 | 状态 |
-|:--|:--:|
-| 跌倒预测方法、装置、电子设备和存储介质 | `CN2023112552115` |
-| 胃黏膜标本定量分析方法与流程 | 审查中 |
-
----
-
 ## 🏆 Honors
 
 <div align="center">
