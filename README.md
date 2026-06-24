@@ -23,9 +23,9 @@
 
 ```yaml
 🎓 Education  │ 东北大学 (985·211·双一流) 硕士
-🎯 Focus     │ 计算机视觉 / 医学图像分析
-🏢 Role      │ 算法工程师
-📍 Location  │ 中国·浙江
+🎯 Focus     │ 计算机视觉 / 机器人感知 / 大模型
+🏢 Role      │ 高级算法工程师 @ 比亚迪
+📍 Location  │ 中国·深圳
 ```
 
 </td></tr></table>
@@ -40,7 +40,11 @@
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/ROS2-22314E?style=for-the-badge&logo=ros&logoColor=white" />
+  <img src="https://img.shields.io/badge/Qwen-615FFF?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/SAM3-FF6B6B?style=for-the-badge&logoColor=white" />
 </p>
 
 <details>
@@ -54,6 +58,8 @@
 | 特征匹配 | `SIFT` `SURF` `SuperPoint` `SuperGlue` |
 | 图像生成 | `GAN` `CycleGAN` `pix2pix` |
 | 模型加速 | 模型蒸馏 · 剪枝 · 量化 |
+| 大模型 | `Qwen` `SAM3` 微调 · 部署 · 量化加速 |
+| 机器人 | 感知 · 决策 · 执行 · `ROS2` |
 
 </details>
 
@@ -62,6 +68,50 @@
 ## 🚀 Featured Projects
 
 <table>
+<tr>
+<td width="50%">
+
+### 🤖 人形机器人操作
+> ROS2 · 坐标对齐 · 抓取决策
+
+- 多模态感知融合与实时决策
+- 手眼标定与坐标系对齐
+- 路径规划与灵巧抓取执行
+
+</td>
+<td width="50%">
+
+### 🦾 工业机械臂智能控制
+> 视觉伺服 · 轨迹规划 · ROS2
+
+- 6-DOF 机械臂运动学建模
+- 视觉引导精密装配
+- 实时碰撞检测与避障
+
+</td>
+</tr>
+<tr>
+<td>
+
+### 📹 智能监控系统
+> 行为识别 · 异常检测 · 边缘部署
+
+- 多路视频实时分析
+- 人员行为轨迹追踪
+- 模型量化加速与端侧部署
+
+</td>
+<td>
+
+### 🧠 大模型微调与部署
+> Qwen · SAM3 · 量化加速
+
+- 视觉大模型指令微调 (LoRA/QLoRA)
+- 模型量化 (GPTQ/AWQ) 与推理加速
+- 云边端协同部署
+
+</td>
+</tr>
 <tr>
 <td width="50%">
 
