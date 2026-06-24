@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>广州塔 · 霓虹岭南</title>
+<style>
+  /* ============================================================
+     CYBER-LINGNAN · 赛博岭南 — 极大主义 / 花里胡哨
+     横图29为底 · 竖图28左侧 · 对角线渐变 · 边缘融合
+     ============================================================ */
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @font-face {
+    font-family: 'DisplayCN';
+    src: local('STZhongsong'), local('SimSun'), local('Noto Serif SC'), local('Source Han Serif SC');
+  }
+  @font-face {
+    font-family: 'BodyCN';
+    src: local('STKaiti'), local('KaiTi'), local('Noto Serif SC');
+  }
+
+  :root {
+    --neon-cyan:    #00F5FF;
+    --neon-magenta: #FF2D95;
+    --neon-gold:    #FFD700;
+    --deep-night:   #0A0A14;
+    --jade-green:   #00D2A0;
+    --red-envelope: #E63946;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--deep-night);
+    color: #e0e0e0;
+    font-family: 'BodyCN', 'STKaiti', 'KaiTi', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ===== GLOBAL CANVAS FOR PARTICLES ===== */
+  #particleCanvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  /* ===== MAIN STAGE ===== */
+  .stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ===== BACKGROUND LAYER — IMG_9529 横图全屏 ===== */
+  .bg-layer {
+    position: absolute;
+    inset: -20px;
+    z-index: 1;
+    background: url('IMG_9529.JPG') center/cover no-repeat;
+    filter: brightness(0.7) saturate(1.3) contrast(1.15);
+    animation: bgBreathe 8s ease-in-out infinite alternate;
+  }
+  @keyframes bgBreathe {
+    0%   { filter: brightness(0.7) saturate(1.3) contrast(1.15); }
+    100% { filter: brightness(0.85) saturate(1.5) contrast(1.25); }
+  }
+
+  /* ===== NOISE TEXTURE OVERLAY ===== */
+  .noise-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  /* ===== DIAGONAL GRADIENT OVERLAY — 右上→左下 透明度递减 ===== */
+  .diagonal-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    /* 右上角不透明白色炫光 → 左下角完全透明 */
+    background: linear-gradient(
+      135deg,
+      /* 左上角 (135deg的反向=315deg起点=左下) */
+      transparent 0%,
+      rgba(10,10,20,0.1) 30%,
+      rgba(255,45,149,0.08) 45%,
+      rgba(0,245,255,0.12) 60%,
+      rgba(255,255,255,0.18) 80%,
+      rgba(255,255,255,0.35) 90%,
+      rgba(210,240,255,0.5) 100%
+    );
+    animation: diagonalShift 12s ease-in-out infinite alternate;
+  }
+  @keyframes diagonalShift {
+    0% {
+      background: linear-gradient(135deg, transparent 0%, rgba(10,10,20,0.05) 25%, rgba(255,45,149,0.05) 42%, rgba(0,245,255,0.08) 58%, rgba(255,255,255,0.12) 78%, rgba(255,255,255,0.25) 90%, rgba(210,240,255,0.4) 100%);
+    }
+    50% {
+      background: linear-gradient(135deg, transparent 0%, rgba(10,10,20,0.12) 28%, rgba(0,210,160,0.1) 48%, rgba(255,45,149,0.15) 62%, rgba(0,245,255,0.2) 75%, rgba(255,255,255,0.3) 88%, rgba(255,210,0,0.25) 100%);
+    }
+    100% {
+      background: linear-gradient(135deg, transparent 0%, rgba(10,10,20,0.08) 32%, rgba(255,215,0,0.1) 50%, rgba(0,245,255,0.14) 65%, rgba(255,45,149,0.18) 80%, rgba(255,255,255,0.3) 92%, rgba(210,240,255,0.55) 100%);
+    }
+  }
+
+  /* ===== SCANLINES OVERLAY ===== */
+  .scanlines {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+  }
+
+  /* ===== VIGNETTE (四角暗角) ===== */
+  .vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(10,10,20,0.55) 100%);
+  }
+
+  /* ===== PORTRAIT CARD 通用样式 ===== */
+  .portrait-card {
+    position: absolute;
+    z-index: 6;
+    border-radius: 18px;
+    overflow: visible;
+    transition: filter 0.8s ease, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+  }
+  .portrait-card:hover {
+    transform: scale(1.04) translateY(-8px);
+  }
+
+  /* ★ 卡片1 — IMG_9528 左侧偏上 */
+  .card-28 {
+    left: 4vw;
+    top: 12vh;
+    width: clamp(180px, 20vw, 340px);
+    animation: cardFloat28 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(0,245,255,0.35))
+            drop-shadow(0 0 60px rgba(255,45,149,0.25))
+            drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+  }
+  .card-28:hover {
+    filter: drop-shadow(0 0 45px rgba(0,245,255,0.55))
+            drop-shadow(0 0 80px rgba(255,45,149,0.4))
+            drop-shadow(0 25px 50px rgba(0,0,0,0.6));
+  }
+  @keyframes cardFloat28 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33%       { transform: translateY(-14px) rotate(0.5deg); }
+    66%       { transform: translateY(8px) rotate(-0.3deg); }
+  }
+
+  /* ★ 卡片2 — IMG_9525 左侧偏下 */
+  .card-25 {
+    left: 8vw;
+    bottom: 14vh;
+    width: clamp(160px, 18vw, 300px);
+    animation: cardFloat25 7s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(255,215,0,0.3))
+            drop-shadow(0 0 50px rgba(0,210,160,0.2))
+            drop-shadow(0 15px 35px rgba(0,0,0,0.5));
+  }
+  .card-25:hover {
+    filter: drop-shadow(0 0 40px rgba(255,215,0,0.5))
+            drop-shadow(0 0 70px rgba(0,210,160,0.35))
+            drop-shadow(0 20px 45px rgba(0,0,0,0.6));
+  }
+  @keyframes cardFloat25 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33%       { transform: translateY(-10px) rotate(-0.6deg); }
+    66%       { transform: translateY(5px) rotate(0.4deg); }
+  }
+
+  /* 竖图主体 */
+  .portrait-card .img-wrap {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    /* 边缘渐变融合：用mask实现 */
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at center, black 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 80% at center, black 55%, transparent 100%);
+  }
+  .portrait-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    transition: transform 0.6s ease;
+  }
+  .portrait-card:hover img {
+    transform: scale(1.05);
+  }
+
+  /* 卡片发光边框 */
+  .portrait-card .glow-border {
+    position: absolute;
+    inset: -3px;
+    border-radius: 20px;
+    padding: 3px;
+    background: conic-gradient(
+      from 0deg,
+      var(--neon-cyan),
+      var(--neon-magenta),
+      var(--neon-cyan),
+      var(--neon-gold),
+      var(--neon-cyan)
+    );
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 2px));
+    animation: borderRotate 4s linear infinite;
+    z-index: -1;
+  }
+  .card-25 .glow-border {
+    animation-duration: 5s;
+    animation-direction: reverse;
+  }
+  @keyframes borderRotate {
+    100% { filter: hue-rotate(360deg); }
+  }
+
+  /* ===== 右上角装饰文字 ===== */
+  .corner-decor {
+    position: absolute;
+    z-index: 7;
+    pointer-events: none;
+  }
+  .corner-decor.top-right {
+    top: 6vh;
+    right: 4vw;
+    text-align: right;
+  }
+  .corner-decor .glyph-big {
+    font-family: 'DisplayCN', 'STZhongsong', serif;
+    font-size: clamp(4rem, 10vw, 10rem);
+    color: rgba(255,255,255,0.06);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    animation: glyphPulse 5s ease-in-out infinite;
+  }
+  @keyframes glyphPulse {
+    0%, 100% { color: rgba(255,255,255,0.06); }
+    50%      { color: rgba(0,245,255,0.1); }
+  }
+
+  /* ===== 左下角信息面板 ===== */
+  .info-panel {
+    position: absolute;
+    z-index: 7;
+    bottom: 6vh;
+    left: 4vw;
+    max-width: 320px;
+  }
+  .info-panel .line-accent {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-cyan), transparent);
+    margin-bottom: 18px;
+    animation: accentPulse 2.5s ease-in-out infinite;
+  }
+  @keyframes accentPulse {
+    0%, 100% { opacity: 0.5; width: 80px; }
+    50%      { opacity: 1;   width: 120px; }
+  }
+  .info-panel .location {
+    font-family: 'DisplayCN', 'STZhongsong', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 30px rgba(0,245,255,0.5), 0 0 60px rgba(0,245,255,0.2);
+    margin-bottom: 6px;
+  }
+  .info-panel .date {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ===== 浮动光点 (CSS only) ===== */
+  .floating-orb {
+    position: absolute;
+    z-index: 8;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(40px);
+  }
+  .orb-1 {
+    width: 180px; height: 180px;
+    background: rgba(0,245,255,0.12);
+    top: 15%; right: 20%;
+    animation: orbFloat1 8s ease-in-out infinite;
+  }
+  .orb-2 {
+    width: 140px; height: 140px;
+    background: rgba(255,45,149,0.1);
+    bottom: 25%; left: 35%;
+    animation: orbFloat2 10s ease-in-out infinite;
+  }
+  .orb-3 {
+    width: 100px; height: 100px;
+    background: rgba(255,215,0,0.08);
+    top: 50%; right: 10%;
+    animation: orbFloat3 7s ease-in-out infinite;
+  }
+  @keyframes orbFloat1 {
+    0%, 100% { transform: translate(0, 0)   scale(1); }
+    33%       { transform: translate(30px, -20px) scale(1.2); }
+    66%       { transform: translate(-20px, 15px) scale(0.85); }
+  }
+  @keyframes orbFloat2 {
+    0%, 100% { transform: translate(0, 0)   scale(1); }
+    50%      { transform: translate(-25px, -30px) scale(1.3); }
+  }
+  @keyframes orbFloat3 {
+    0%, 100% { transform: translate(0, 0)   scale(1); }
+    33%      { transform: translate(-15px, 20px) scale(0.8); }
+    66%      { transform: translate(25px, -10px) scale(1.15); }
+  }
+
+  /* ===== 扫描线光束 ===== */
+  .light-beam {
+    position: absolute;
+    z-index: 9;
+    pointer-events: none;
+    width: 2px;
+    height: 120%;
+    background: linear-gradient(180deg, transparent, rgba(0,245,255,0.3), transparent);
+    top: -10%;
+    left: 30%;
+    animation: beamSweep 6s ease-in-out infinite;
+    filter: blur(2px);
+  }
+  @keyframes beamSweep {
+    0%   { left: 20%; opacity: 0; }
+    20%  { opacity: 0.6; }
+    80%  { opacity: 0.6; }
+    100% { left: 75%; opacity: 0; }
+  }
+
+  /* ===== 网格线背景图案 (底部装饰) ===== */
+  .grid-pattern {
+    position: absolute;
+    z-index: 8;
+    pointer-events: none;
+    bottom: 0; right: 0;
+    width: 50%; height: 40%;
+    opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(0,245,255,0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,245,255,0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%);
+    -webkit-mask-image: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%);
+  }
+
+  @media (max-width: 768px) {
+    .stage {
+      overflow: hidden;
+    }
+    .portrait-card.card-28 {
+      width: clamp(120px, 35vw, 200px);
+      left: 5vw;
+      top: 10vh;
+    }
+    .portrait-card.card-25 {
+      width: clamp(110px, 30vw, 180px);
+      left: 5vw;
+      bottom: 20vh;
+    }
+    .info-panel {
+      bottom: 3vh;
+      left: 5vw;
+    }
+    .info-panel .location { font-size: 1.4rem; }
+    .corner-decor .glyph-big { font-size: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 粒子画布 -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- 主舞台 -->
+<div class="stage">
+
+  <!-- 层1: 横图背景 -->
+  <div class="bg-layer"></div>
+
+  <!-- 层2: 噪点纹理 -->
+  <div class="noise-overlay"></div>
+
+  <!-- 层3: 对角线渐变 (右上→左下透明度递减) -->
+  <div class="diagonal-gradient"></div>
+
+  <!-- 层4: 扫描线 -->
+  <div class="scanlines"></div>
+
+  <!-- 层5: 暗角 -->
+  <div class="vignette"></div>
+
+  <!-- 浮动光球 -->
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
+
+  <!-- 扫描光束 -->
+  <div class="light-beam"></div>
+
+  <!-- 网格装饰 -->
+  <div class="grid-pattern"></div>
+
+  <!-- 右上角装饰大字 -->
+  <div class="corner-decor top-right">
+    <div class="glyph-big">廣州</div>
+  </div>
+
+  <!-- 左下信息面板 -->
+  <div class="info-panel">
+    <div class="line-accent"></div>
+    <div class="location">广州塔</div>
+    <div class="date">CANTON TOWER · 2026.06</div>
+  </div>
+
+  <!-- ★ 竖图卡片1 — IMG_9528 左侧偏上 ★ -->
+  <div class="portrait-card card-28">
+    <div class="glow-border"></div>
+    <div class="img-wrap">
+      <img src="IMG_9528.jpeg" alt="广州塔 · 人像一">
+    </div>
+  </div>
+
+  <!-- ★ 竖图卡片2 — IMG_9525 左侧偏下 ★ -->
+  <div class="portrait-card card-25">
+    <div class="glow-border"></div>
+    <div class="img-wrap">
+      <img src="IMG_9525.jpeg" alt="广州塔 · 人像二">
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ============================================================
+   PARTICLE SYSTEM · 霓虹粒子 — 花里胡哨必备
+   ============================================================ */
+(function() {
+  const canvas = document.getElementById('particleCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let W, H;
+  const particles = [];
+  const PARTICLE_COUNT = 80;
+  const COLORS = [
+    'rgba(0, 245, 255,',   // neon cyan
+    'rgba(255, 45, 149,',   // neon magenta
+    'rgba(255, 215, 0,',    // neon gold
+    'rgba(0, 210, 160,',    // jade green
+    'rgba(255, 255, 255,',  // white sparkle
+  ];
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  class Particle {
+    constructor() {
+      this.reset(true);
+    }
+    reset(initial) {
+      this.x = Math.random() * W;
+      this.y = initial ? Math.random() * H : H + 10;
+      this.size = Math.random() * 2.5 + 0.8;
+      this.speedY = -(Math.random() * 0.6 + 0.2);
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.opacity = Math.random() * 0.7 + 0.3;
+      this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+      this.twinkleSpeed = Math.random() * 0.02 + 0.005;
+      this.twinkleOffset = Math.random() * Math.PI * 2;
+    }
+    update() {
+      this.y += this.speedY;
+      this.x += this.speedX + Math.sin(this.y * 0.02 + this.twinkleOffset) * 0.3;
+      this.opacity += Math.sin(Date.now() * this.twinkleSpeed + this.twinkleOffset) * 0.005;
+      this.opacity = Math.max(0.1, Math.min(0.9, this.opacity));
+
+      if (this.y < -10 || this.x < -10 || this.x > W + 10) {
+        this.reset(false);
+      }
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color + this.opacity + ')';
+      ctx.shadowColor = this.color + (this.opacity * 0.6) + ')';
+      ctx.shadowBlur = this.size * 4;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+  }
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push(new Particle());
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+</body>
+</html>
