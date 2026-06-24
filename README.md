@@ -154,18 +154,6 @@
 
 </td>
 </tr>
-<tr>
-<td width="33%">
-
-### 🏥 消化道图像分类
-> MobileNet · 蒸馏
-
-- 模型推理加速 14% (GPU)
-- 少样本学习优化
-- MiniImageNet 微调
-
-</td>
-</tr>
 </table>
 
 ---
