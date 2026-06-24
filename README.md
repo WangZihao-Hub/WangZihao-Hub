@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <a href="https://wangzihao-hub.github.io"><img src="https://img.shields.io/badge/🌐_主页-wangzihao--hub.github.io-00F5FF?style=for-the-badge&labelColor=0A0A14" /></a>
+  <a href="https://wangzihao-hub.github.io/WangZihao-Hub/"><img src="https://img.shields.io/badge/🌐_主页-wangzihao--hub.github.io-00F5FF?style=for-the-badge&labelColor=0A0A14" /></a>
 </p>
 
 <p align="center">
@@ -57,9 +57,9 @@
 
 ## 🚀 Featured Projects
 
-<table>
+<table width="100%">
 <tr>
-<td width="50%">
+<td width="33%">
 
 ### 🤖 人形机器人操作
 > ROS2 · 坐标对齐 · 抓取决策
@@ -69,7 +69,7 @@
 - 路径规划与灵巧抓取执行
 
 </td>
-<td width="50%">
+<td width="33%">
 
 ### 🦾 工业机械臂智能控制
 > 视觉伺服 · 轨迹规划 · ROS2
@@ -79,9 +79,7 @@
 - 实时碰撞检测与避障
 
 </td>
-</tr>
-<tr>
-<td>
+<td width="33%">
 
 ### 📹 智能监控系统
 > 行为识别 · 异常检测 · 边缘部署
@@ -91,7 +89,9 @@
 - 模型量化加速与端侧部署
 
 </td>
-<td>
+</tr>
+<tr>
+<td width="33%">
 
 ### 🧠 大模型微调与部署
 > Qwen · SAM3 · 量化加速
@@ -101,9 +101,7 @@
 - 云边端协同部署
 
 </td>
-</tr>
-<tr>
-<td width="50%">
+<td width="33%">
 
 ### 🔬 胃黏膜病理分割
 > ResU-Net · LBP 增强
@@ -113,7 +111,7 @@
 - 封装为独立软件工具
 
 </td>
-<td width="50%">
+<td width="33%">
 
 ### 🫁 腹部CT多器官分割
 > DA-Unet · Swin Transformer
@@ -125,7 +123,7 @@
 </td>
 </tr>
 <tr>
-<td>
+<td width="33%">
 
 ### 🩻 3D肺部CT血管分割
 > 3D-UNet · nn-UNet · 骨架化
@@ -135,7 +133,7 @@
 - 定量形态学分析
 
 </td>
-<td>
+<td width="33%">
 
 ### 🔍 消化道图像拼接
 > CycleGAN · SuperGlue
@@ -145,9 +143,7 @@
 - 相机畸变自动校正
 
 </td>
-</tr>
-<tr>
-<td>
+<td width="33%">
 
 ### 👁️ 眼动追踪系统
 > YOLO · pix2pix
@@ -157,7 +153,9 @@
 - 多模态人机交互
 
 </td>
-<td>
+</tr>
+<tr>
+<td width="33%">
 
 ### 🏥 消化道图像分类
 > MobileNet · 蒸馏
@@ -189,7 +187,7 @@
 
 <div align="center">
 
-### 🌐 [wangzihao-hub.github.io](https://wangzihao-hub.github.io)
+### 🌐 [wangzihao-hub.github.io](https://wangzihao-hub.github.io/WangZihao-Hub/)
 
 <sub>© 2026 Zihao Wang · 赛博岭南 · Built with ❤️</sub>
 
