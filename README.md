@@ -160,17 +160,6 @@
 
 <div align="center">
 
-## 📊 GitHub Analytics
-
-<p>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=WangZihao-Hub&show_icons=true&theme=radical&hide_border=true&bg_color=0A0A14&title_color=00F5FF&icon_color=FF2D95&text_color=FFFFFF" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=WangZihao-Hub&layout=compact&hide_border=true&bg_color=0A0A14&title_color=00F5FF&text_color=FFFFFF" />
-</p>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=WangZihao-Hub&theme=radical&hide_border=true&background=0A0A14&stroke=FF2D95&ring=00F5FF&fire=FFD700" />
-
-</div>
-
 ---
 
 <div align="center">
