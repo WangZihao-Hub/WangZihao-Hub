@@ -46,11 +46,11 @@
 
 | 方向 | |
 |:--|:--|
-| 图像分割 | U-Net · nn-UNet · Swin Transformer |
-| 目标检测 | YOLO · R-CNN · MobileNet |
-| 图像生成 | GAN · CycleGAN · pix2pix |
+| 图像分割 | CNN · Transformer · 自监督 |
+| 目标检测 | Anchor-Free · Transformer · 端侧部署 |
+| 图像生成 | GAN · 扩散模型 · 图像翻译 |
 | 模型加速 | 蒸馏 · 剪枝 · 量化 |
-| 大模型 | Qwen · SAM3 · 微调 · 部署 |
+| 大模型 | VLM · 多模态 · 微调 · 部署 |
 | 机器人 | 感知 · 决策 · 执行 · ROS2 |
 
 ---
