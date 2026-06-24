@@ -23,9 +23,9 @@
 
 ```yaml
 🎓 Education  │ 东北大学 (985·211·双一流) 硕士
-🎯 Focus     │ 计算机视觉 / 机器人感知 / 大模型
-🏢 Role      │ 高级算法工程师 @ 比亚迪
-📍 Location  │ 中国·深圳
+🎯 Focus      │ 计算机视觉 / 机器人感知 / 大模型
+🏢 Role       │ 高级算法工程师 @ 新能源AI
+📍 Location   │ 中国·深圳
 ```
 
 </td></tr></table>
