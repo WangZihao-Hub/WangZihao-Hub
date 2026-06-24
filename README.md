@@ -42,21 +42,16 @@
   <img src="https://img.shields.io/badge/SAM3-FF6B6B?style=for-the-badge&logoColor=white" />
 </p>
 
-<details>
-<summary><b>🔬 细分领域</b></summary>
-<br>
+## 🔬 技术领域
 
-| 方向 | 代表方法 |
+| 方向 | |
 |:--|:--|
-| 图像分割 | `U-Net` `DA-Unet` `nn-UNet` `SegNet` `Swin Transformer` |
-| 目标检测 | `YOLO` `R-CNN` `MobileNet` |
-| 特征匹配 | `SIFT` `SURF` `SuperPoint` `SuperGlue` |
-| 图像生成 | `GAN` `CycleGAN` `pix2pix` |
-| 模型加速 | 模型蒸馏 · 剪枝 · 量化 |
-| 大模型 | `Qwen` `SAM3` 微调 · 部署 · 量化加速 |
-| 机器人 | 感知 · 决策 · 执行 · `ROS2` |
-
-</details>
+| 图像分割 | U-Net · nn-UNet · Swin Transformer |
+| 目标检测 | YOLO · R-CNN · MobileNet |
+| 图像生成 | GAN · CycleGAN · pix2pix |
+| 模型加速 | 蒸馏 · 剪枝 · 量化 |
+| 大模型 | Qwen · SAM3 · 微调 · 部署 |
+| 机器人 | 感知 · 决策 · 执行 · ROS2 |
 
 ---
 
