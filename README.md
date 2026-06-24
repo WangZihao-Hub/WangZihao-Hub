@@ -116,7 +116,7 @@
 <td width="50%">
 
 ### 🔬 胃黏膜病理分割
-> Dice **97.4%** · ResU-Net · LBP 增强
+> ResU-Net · LBP 增强
 
 - 全流程自动化标注 & 分割
 - 已应用于临床教学
@@ -126,7 +126,7 @@
 <td width="50%">
 
 ### 🫁 腹部CT多器官分割
-> Dice **84%** · DA-Unet · Swin Transformer
+> DA-Unet · Swin Transformer
 
 - 弱监督学习流程
 - 封装供医生日常使用
@@ -148,7 +148,7 @@
 <td>
 
 ### 🔍 消化道图像拼接
-> 误差 ↓ **36.9%** · CycleGAN · SuperGlue
+> CycleGAN · SuperGlue
 
 - 全局粗配准 + 局部精配准
 - 旋转算法自主设计
@@ -160,7 +160,7 @@
 <td>
 
 ### 👁️ 眼动追踪系统
-> 误差 **3.52°** · YOLO · pix2pix
+> YOLO · pix2pix
 
 - 50+ 患者数据采集
 - 注视点回归模型
@@ -170,7 +170,7 @@
 <td>
 
 ### 🏥 消化道图像分类
-> 准确率 **99.7%** · MobileNet · 蒸馏
+> MobileNet · 蒸馏
 
 - 模型推理加速 14% (GPU)
 - 少样本学习优化
