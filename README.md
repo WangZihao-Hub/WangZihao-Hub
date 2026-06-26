@@ -25,24 +25,6 @@
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=WangZihao-Hub&show_icons=true&hide_border=true&bg_color=0A0A14&title_color=00F5FF&icon_color=FF2D95&text_color=C9D1D9" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=WangZihao-Hub&hide_border=true&background=0A0A14&ring=00F5FF&fire=FF2D95&currStreakLabel=00F5FF&sideNums=C9D1D9&sideLabels=C9D1D9&dates=C9D1D9" height="165" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WangZihao-Hub&layout=compact&hide_border=true&bg_color=0A0A14&title_color=00F5FF&text_color=C9D1D9" height="165" />
-  <img src="https://github-profile-trophy.vercel.app/?username=WangZihao-Hub&theme=onedark&no-frame=true&column=7&margin-w=8&margin-h=8" height="165" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=WangZihao-Hub&theme=react-dark&hide_border=true&bg_color=0A0A14&color=00F5FF&line=FF2D95&point=00F5FF&area=true" width="95%" />
-</p>
-
----
-
 ## 🧬 Tech Arsenal
 
 <p align="center">
