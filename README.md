@@ -4,11 +4,6 @@
 
 </div>
 
-<p align="center">
-  <a href="https://wangzihao-hub.github.io/WangZihao-Hub/"><img src="https://img.shields.io/badge/🌐_主页-wangzihao--hub.github.io-00F5FF?style=for-the-badge&labelColor=0A0A14" /></a>
-  <img src="https://komarev.com/ghpvc/?username=WangZihao-Hub&color=FF2D95&style=flat-square&label=VISITORS" />
-</p>
-
 ---
 
 <h3 align="center">
