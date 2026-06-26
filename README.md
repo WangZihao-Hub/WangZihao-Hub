@@ -39,12 +39,12 @@
 
 | 🧭 方向 | ⚡ 关键技术 |
 | :---: | :---: |
-| ![](https://img.shields.io/badge/-🧩_图像分割-00F5FF?style=flat-square) | `CNN` · `Transformer` · `自监督` |
-| ![](https://img.shields.io/badge/-🎯_目标检测-FF2D95?style=flat-square) | `Anchor-Free` · `Transformer` · `端侧部署` |
-| ![](https://img.shields.io/badge/-🎨_图像生成-B47AFF?style=flat-square) | `GAN` · `扩散模型` · `图像翻译` |
-| ![](https://img.shields.io/badge/-⚡_模型加速-FFB627?style=flat-square) | `蒸馏` · `剪枝` · `量化` |
-| ![](https://img.shields.io/badge/-🧠_大模型-3DD68C?style=flat-square) | `VLM` · `多模态` · `微调` · `部署` |
-| ![](https://img.shields.io/badge/-🤖_机器人-4DA8FF?style=flat-square) | `感知` · `决策` · `执行` · `ROS2` |
+| 🧩 **图像分割** | `CNN` · `Transformer` · `自监督` |
+| 🎯 **目标检测** | `Anchor-Free` · `Transformer` · `端侧部署` |
+| 🎨 **图像生成** | `GAN` · `扩散模型` · `图像翻译` |
+| ⚡ **模型加速** | `蒸馏` · `剪枝` · `量化` |
+| 🧠 **大模型** | `VLM` · `多模态` · `微调` · `部署` |
+| 🤖 **机器人** | `感知` · `决策` · `执行` · `ROS2` |
 
 ---
 
