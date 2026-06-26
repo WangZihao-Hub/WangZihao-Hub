@@ -12,7 +12,7 @@
 </h3>
 
 <p align="center">
-  🎓 <b>东北大学</b> (985·211·双一流) 硕士<br>
+  🎓 <b>东北大学</b> <a href="https://www.neu.edu.cn/"><img src="https://img.shields.io/badge/🏫_Northeastern_University-00F5FF?style=flat-square&labelColor=0A0A14" /></a> 硕士<br>
   🎯 计算机视觉 / 机器人感知·决策·执行 / 大模型<br>
   📍 中国·深圳
 </p>
