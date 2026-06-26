@@ -163,7 +163,7 @@
 <p align="center">
   <a href="https://github.com/WangZihao-Hub"><img src="https://img.shields.io/badge/GitHub-WangZihao--Hub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://wangzihao-hub.github.io/WangZihao-Hub/"><img src="https://img.shields.io/badge/🌐_Blog-wangzihao--hub.github.io-00F5FF?style=for-the-badge&labelColor=0A0A14" /></a>
-  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/📧_Email-your@email.com-FF2D95?style=for-the-badge&labelColor=0A0A14" /></a>
+  <a href="mailto:ives.zh.wang@gmail.com"><img src="https://img.shields.io/badge/📧_Email-ives.zh.wang@gmail.com-FF2D95?style=for-the-badge&labelColor=0A0A14" /></a>
 </p>
 
 ---
