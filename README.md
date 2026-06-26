@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Noto+Serif+SC&weight=700&size=28&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&repeat=true&width=435&lines=%F0%9F%8F%AF+%E8%B5%9B%E5%8D%9A%E5%B2%AD%E5%8D%97+%C2%B7+%E5%B9%BF%E5%B7%9E%E5%A1%94;%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88+%7C+%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89;%F0%9F%94%97+wangzihao-hub.github.io" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Noto+Serif+SC&weight=700&size=28&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&repeat=true&width=435&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88+%7C+%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89;%F0%9F%94%97+wangzihao-hub.github.io" alt="Typing SVG" />
 
 </div>
 
