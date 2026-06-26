@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Noto+Serif+SC&weight=700&size=28&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&repeat=true&width=435&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88+%7C+%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89;%F0%9F%94%97+wangzihao-hub.github.io" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Noto+Serif+SC&weight=700&size=28&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&repeat=true&width=600&lines=%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB+%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88+%7C+%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89;%F0%9F%A4%96+%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%84%9F%E7%9F%A5%C2%B7%E5%86%B3%E7%AD%96%C2%B7%E6%89%A7%E8%A1%8C;%F0%9F%94%97+wangzihao-hub.github.io" alt="Typing SVG" />
 
 </div>
 
 <p align="center">
   <a href="https://wangzihao-hub.github.io/WangZihao-Hub/"><img src="https://img.shields.io/badge/🌐_主页-wangzihao--hub.github.io-00F5FF?style=for-the-badge&labelColor=0A0A14" /></a>
-</p>
-
-<p align="center">
   <img src="https://komarev.com/ghpvc/?username=WangZihao-Hub&color=FF2D95&style=flat-square&label=VISITORS" />
 </p>
 
@@ -16,13 +13,32 @@
 
 <h3 align="center">
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
-   Hey there, I'm <b>Zihao Wang</b>
+  你好，我是 <b>Zihao Wang</b>
 </h3>
 
 <p align="center">
   🎓 <b>东北大学</b> (985·211·双一流) 硕士<br>
   🎯 计算机视觉 / 机器人感知·决策·执行 / 大模型<br>
-  📍 中国·深圳
+  📍 中国·深圳<br>
+  💼 曾于临床影像与机器人方向落地多个工程项目
+</p>
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=WangZihao-Hub&show_icons=true&hide_border=true&bg_color=0A0A14&title_color=00F5FF&icon_color=FF2D95&text_color=C9D1D9" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=WangZihao-Hub&hide_border=true&background=0A0A14&ring=00F5FF&fire=FF2D95&currStreakLabel=00F5FF&sideNums=C9D1D9&sideLabels=C9D1D9&dates=C9D1D9" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WangZihao-Hub&layout=compact&hide_border=true&bg_color=0A0A14&title_color=00F5FF&text_color=C9D1D9" height="165" />
+  <img src="https://github-profile-trophy.vercel.app/?username=WangZihao-Hub&theme=onedark&no-frame=true&column=7&margin-w=8&margin-h=8" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=WangZihao-Hub&theme=react-dark&hide_border=true&bg_color=0A0A14&color=00F5FF&line=FF2D95&point=00F5FF&area=true" width="95%" />
 </p>
 
 ---
@@ -34,12 +50,14 @@
   <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/ROS2-22314E?style=for-the-badge&logo=ros&logoColor=white" />
   <img src="https://img.shields.io/badge/Qwen-615FFF?style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/SAM3-FF6B6B?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" />
 </p>
 
 ## 🔬 技术领域
@@ -158,7 +176,13 @@
 
 ---
 
-<div align="center">
+## 📫 Contact
+
+<p align="center">
+  <a href="https://github.com/WangZihao-Hub"><img src="https://img.shields.io/badge/GitHub-WangZihao--Hub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://wangzihao-hub.github.io/WangZihao-Hub/"><img src="https://img.shields.io/badge/🌐_Blog-wangzihao--hub.github.io-00F5FF?style=for-the-badge&labelColor=0A0A14" /></a>
+  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/📧_Email-your@email.com-FF2D95?style=for-the-badge&labelColor=0A0A14" /></a>
+</p>
 
 ---
 
